@@ -1,0 +1,89 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Pranav Viswanathan> ssh -i .ssh/microprojet pranav@34.125.83.234
+Linux instance-1 4.19.0-18-cloud-amd64 #1 SMP Debian 4.19.208-1 (2021-09-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in theLinux instance-1 4.19.0-18-cloud-amd64 #1 SMP Debian 4.19.208-1 (2021-09-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Nov 22 10:18:43 2021 from 182.65.73.34
+pranav@instance-1:~$ ls
+mqtt-samples  my_proj
+pranav@instance-1:~$ cd my_proj
+pranav@instance-1:~/my_proj$ ls
+manage.py  my_proj
+pranav@instance-1:~/my_proj$ vi ~/.bashrc
+pranav@instance-1:~/my_proj$ source ~/.bashrc
+pranav@instance-1:~/my_proj$ mkvirtualenv django
+created virtual environment CPython3.7.3.final.0-64 in 269ms
+  creator CPython3Posix(dest=/home/pranav/.virtualenvs/django, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/pranav/.local/share/virtualenv)
+    added seed packages: Django==3.2.9, asgiref==3.4.1, paho_mqtt==1.6.1, pip==21.3.1, pytz==2021.3, setuptools==58.3.0, sqlparse==0.4.2, typing_extensions==4.0.0, wheel==0.37.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+(django) pranav@instance-1:~/my_proj$ workon django
+(django) pranav@instance-1:~/my_proj$ pip install paho-mqtt
+Requirement already satisfied: paho-mqtt in /home/pranav/.virtualenvs/django/lib/python3.7/site-packages (1.6.1)
+(django) pranav@instance-1:~/my_proj$ ls
+manage.py  my_proj
+(django) pranav@instance-1:~/my_proj$ cd my_proj
+(django) pranav@instance-1:~/my_proj/my_proj$ ls
+__init__.py  __pycache__  asgi.py  settings.py  urls.py  wsgi.py
+(django) pranav@instance-1:~/my_proj/my_proj$ vi settings.py
+(django) pranav@instance-1:~/my_proj/my_proj$ cd
+(django) pranav@instance-1:~$ ls
+mqtt-samples  my_proj
+(django) pranav@instance-1:~$ cd my_proj
+(django) pranav@instance-1:~/my_proj$ python manage.py makemigrations
+No changes detected
+(django) pranav@instance-1:~/my_proj$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(django) pranav@instance-1:~/my_proj$ python manage.py createsuperuser
+Username (leave blank to use 'pranav'): admin
+Email address: pranav.viswanathan11@gmail.com
+Password:
+Password (again):
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(django) pranav@instance-1:~/my_proj$ python manage.py collectstatic
+
+128 static files copied to '/home/pranav/my_proj/static'.
+(django) pranav@instance-1:~/my_proj$ python manage.py runserver 0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 28, 2021 - 05:46:49
+Django version 3.2.9, using settings 'my_proj.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+^C(django) pranav@instance-1:~/my_proj$ cd ~
