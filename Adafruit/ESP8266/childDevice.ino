@@ -47,6 +47,7 @@ void loop() {
     Serial.println(F("HcClose1 Published to server!"));
   }
   }
+  delay(5000);
 }
 void MQTT_connect() {
   int8_t ret;
