@@ -18,7 +18,7 @@ def main_fn():
 
 def send_msg(msg):
    broker_address = "127.0.0.1"
-   mqtt_username = "raman"
+   mqtt_username = "pranav"
    mqtt_password = "Test@2021"
    client = mqtt.Client("CLIENT1")
    client.username_pw_set(mqtt_username, mqtt_password) # Sets the username and password
