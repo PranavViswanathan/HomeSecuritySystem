@@ -6,15 +6,15 @@
 
 /************************* WiFi Access Point *********************************/
 
-#define WLAN_SSID       "Orange04"
-#define WLAN_PASS       "AllIsWell"
+#define WLAN_SSID       "SSID"
+#define WLAN_PASS       "PASSWD"
 
 /************************* Adafruit.io Setup *********************************/
 
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
-#define AIO_USERNAME    "PranavViswanathan"
-#define AIO_KEY         "aio_uMiD22VjwV9veI3ZXKlGsXLJljMx"
+#define AIO_USERNAME    "USERNAME"
+#define AIO_KEY         "IO_KEY"
 
 /************ Global State ******************/
 
