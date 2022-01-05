@@ -1,4 +1,5 @@
-# HomeSecuritySystem
+
+![Copy of Pranav Viswanathan](https://github.com/PranavViswanathan/HomeSecuritySystem/blob/main/ReadmeResources/Home%20Security%20System.gif)
 
 Security of personal belongings is one of the highest priorities of a modern
 day person. From personal safes to advanced biometric locking, the amount
